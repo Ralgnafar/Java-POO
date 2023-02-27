@@ -43,13 +43,36 @@ class Cachorro {
         this.hasVaccine = hasVaccine;
     }
 
-    public void description(){
-        System.out.println(
-        "Esse é " + this.name +
-        ", ele é um cachorro da raça " + this.race +
-        " de porte " + this.size + 
-        " da cor " + this.color +
-        " e tem " + this.age + " anos");
+    public String description(){
+        String vacinado;
+
+        if(this.hasVaccine){
+            vacinado = "e está com a vacinas em dia";
+        }else{
+            vacinado = "e não está com as vacinas em dia";
+        }
+
+        if(this.sex == 'm'){
+            return (
+                "Esse é " + this.name +
+                ", ele é um cachorro macho da raça " + this.race +
+                " da cor " + this.color +
+                ", ele tem " + this.age + " anos" +
+                " pesa " + this.weight + " kilos " +
+                "e tem " + this.size + " centimetros de altura " +
+                vacinado
+            );
+        }else{
+            return (
+                "Essa é " + this.name +
+                ", ela é um cachorro fêmea da raça " + this.race +
+                " da cor " + this.color +
+                ", ela tem " + this.age + " anos" +
+                " pesa " + this.weight + " kilos " +
+                "e tem " + this.size + " centimetros de altura " +
+                vacinado
+            );
+        }
     }
 
     public String imcc(){
