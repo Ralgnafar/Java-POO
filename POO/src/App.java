@@ -61,9 +61,9 @@ class Cachorro {
             return "Peso normal";
         }else if(imcc <= 30f){
             return "Acima do peso";
+        }else{
+            return "Obeso";
         }
-
-
     }
 
 }
