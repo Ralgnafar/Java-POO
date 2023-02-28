@@ -3,8 +3,6 @@ public class App {
         Cachorro rex = new Cachorro("Rex", "Pastor Alemão", "Preto", 40f, 5, 'm', 10f, true);
         Cachorro lassie = new Cachorro("Lassie", 3, 23f, 10f, 'f');
         
-        rex.description();
-        lassie.description();
 
         System.out.println("Execução Terminada");
     }
@@ -86,6 +84,45 @@ class Cachorro {
             return "Acima do peso";
         }else{
             return "Obeso";
+        }
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public boolean getHasvaccine(){
+        return this.hasVaccine;
+    }
+
+    public void setHasVaccine(boolean hasVaccine){
+        this.hasVaccine = hasVaccine;
+    }
+
+    public String bark(){
+        int opcao = (int)(Math.random() * 7);
+
+        switch (opcao) {
+            case 0:
+                return "Woof-woof";
+            case 1:
+                return "au, au";
+            case 2:
+                return "bau, bau";
+            case 3:
+                return "vogh, vogh";
+            case 4:
+                return "ruff, ruff";
+            case 5:
+                return "arf, arf";
+            case 6:
+                return "yap, yap";
+            default:
+                return "erro";
         }
     }
 
