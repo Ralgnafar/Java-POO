@@ -3,6 +3,11 @@ public class App {
         Cachorro rex = new Cachorro("Rex", "Pastor Alemão", "Preto", 40f, 5, 'm', 10f, true);
         Cachorro lassie = new Cachorro("Lassie", 3, 23f, 10f, 'f');
         
+        System.out.println(rex.description());
+        System.out.println(rex.bark());
+
+        System.out.println(lassie.description());
+        System.out.println(lassie.bark());
 
         System.out.println("Execução Terminada");
     }
